@@ -23,7 +23,7 @@ def train_and_validate_svm(train_data, train_labels, test_data, test_labels, \
     return mse, pearson, f_score
 
 def cross_validate_svm(data, labels, \
-                       kernel='linear', C=1.0, gamma='scale', verbose=False, class_weight='balanced'):
+                       kernel='rbf', C=1.0, gamma='scale', verbose=False, class_weight='balanced'):
     print('cross-validating svm...')
     num_cross_validation_trials = 10
     kfold = KFold(num_cross_validation_trials, True, 1)
